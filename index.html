@@ -6,9 +6,10 @@
         <script src="Myjavascript.js" type="text/javaScript">
       
         </script>
-    </head>
+    </head  >
     
-    <body>
+    <body >
+         <h1 id="greeting"></h1>
            
           <fieldset id="hed">
             <p id="name">NAME: FELIX YOHANE</p>
@@ -17,7 +18,7 @@
           </fieldset></br></br>
            
            
-        <h1>INTRODUCTION</h1>
+        <h1 >INTRODUCTION</h1>
         <P> 
             My name is Felix Yohane and am a student of mzuzu universty doing ICT level 2. My aim is to become an expert in
             CSS, JavaScript,  Html, java programming, python, C programing and Php. As a beginer this is my first web page to develop and
@@ -50,11 +51,12 @@
           <li>Creating tables in html</li>
         </ol>
 
-          <form ><fieldset class="mycontact">
+          <form  method="post" action="#" onsubmit=" return checkforblank()">
+            <fieldset class="mycontact">
 
             <h2> CONTACT FORM</h2><br><br>
 
-            <label for="firstname">First Name</label>
+            <label for="firstname" >First Name</label>
             <input type="text" name="firstname" id="FirstName" placeholder="Enter First Name"><br><br>
 
             <label for="Surname">Surname</label>
@@ -63,10 +65,10 @@
             <label for="gender">Male</label>
             <input type="radio" name="gender" id="Malegender">
 
-            <label for="gender">Female</label>
+            <label for="gender1">Female</label>
             <input type="radio" name="gender" id="Femalegender">
 
-            <label for="gender">Others</label>
+            <label for="gender2">Others</label>
             <input type="radio" name="gender" id="othergender"><br><br>
 
             <label for="date">Date Of Birth</label>
@@ -76,7 +78,9 @@
             <input type="email" name="email" id="Myemail" placeholder="Example@gmail.com"><br><br>
 
             <label for="password">password</label>
-            <input type="password" name="password" id="Mypassword" placeholder="Enter password">
+            <input type="password" name="password" id="Mypassword" placeholder="Enter password"><br><br>
+
+            <input type="submit" name="submit" id="submit">
           </fieldset>
          </form><br><br>
             

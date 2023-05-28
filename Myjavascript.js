@@ -16,3 +16,32 @@ function changingImage() {
   
   
 }window.onload=changingImage;
+
+function checkforblank() {
+  if (document.getElementById('FirstName').value=="") {
+    alert('please enter your firstname');
+    document.getElementById('FirstName').style.borderColor ="red";
+    return false;
+    
+  }
+  }
+
+ 
+
+  var currentime=new Date();
+  var currentHour=currentime.getHours();
+  var greeting;
+  if (currentHour<12) {  greeting="Good morning";
+    
+  }
+
+  else if(currentHour<18){   greeting="Good afternoon";
+
+  }
+
+  else{   "Good evening";
+
+  }
+
+  var greetingElement=document.getElementById(".greeting");
+  greetingElement.textcontent=greeting;
