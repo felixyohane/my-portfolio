@@ -1,0 +1,21 @@
+ 
+    body {
+    margin: 50px;;
+    background-color:#f4f4f4;
+    }
+
+   h1 {text-align:center;}
+
+  #hed{color: blue; background-color: blanchedalmond;border-radius:10px; }
+
+  #name{float: right; ;}
+
+  #contact{float:left ;}
+
+  #about{float:right; padding-right: 500px;}
+
+  #footer{background-color: #35424a; padding-left: 20px; color:#f4f4f4; border-radius: 10px;}
+
+  #pic{padding-left: 50px; background-color:#ffffff; border-radius: 10px;}
+  .mycontact{background-color: azure; border-radius: 10px; }
+  
