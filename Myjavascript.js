@@ -15,7 +15,7 @@ function changingImage() {
       
   
   
-}window.onload=changingImage;
+}
 
 function checkforblank() {
   if (document.getElementById('FirstName').value=="") {
@@ -26,22 +26,31 @@ function checkforblank() {
   }
   }
 
+  function getGreeting() {
+    var date = new Date();
+    var hours = date.getHours();
+    var greeting;
+
+    if(hours >=0 && hours <12){
+      greeting="Goood morning";
+    
+    }
+    else if(hours>=12 && hours<18){
+      greeting="Good afternoon";
+
+    }
+
+    else{
+      greeting="Good evening";
+    }
+    return greeting;
+  }
+  function displayGreeting(){
+    var greeting=getGreeting();
+    document.getElementById("greeting").textContent=greeting;
+  }
+
+  
+
  
 
-  var currentime=new Date();
-  var currentHour=currentime.getHours();
-  var greeting;
-  if (currentHour<12) {  greeting="Good morning";
-    
-  }
-
-  else if(currentHour<18){   greeting="Good afternoon";
-
-  }
-
-  else{   "Good evening";
-
-  }
-
-  var greetingElement=document.getElementById(".greeting");
-  greetingElement.textcontent=greeting;
