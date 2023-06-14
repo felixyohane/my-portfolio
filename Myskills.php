@@ -26,5 +26,27 @@
             <td>BEDICT3021</td>
         </tr>
     </table>
+    <?php
+         $servername="localhost";
+         $username="root";
+         $password="";
+         $db_name="myskills";
+
+        //connect to the server
+        $conn=mysqli_connect($servername, $username, $password, $db_name);
+         if(!$conn){die("connection failed".mysqli_connect_error());}
+        
+         echo"SKILLS DETAILS" ."<br>";
+
+         $sql = "SELECT*FROM `skills`;";
+         $results = $conn->query($sql);
+         if ($results->num_rows>0) {
+          while ($row = $results->fetch_assoc()) {
+            echo "ID" .$row["ID"], " -Skills details" .$row["SKILLS_DETAILS"]."<br>";
+          }
+         } else {
+          echo "No results found!";
+         }
+         ?>
 </body>
 </html>

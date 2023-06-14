@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
     <head>
         <title>FELIX</title>
@@ -43,6 +43,28 @@
            <img name="slideshow" width="" height="">
           
         </fieldset> 
+        <?php
+         $servername="localhost";
+         $username="root";
+         $password="";
+         $db_name="my_projects";
+
+        //connect to the server
+        $conn=mysqli_connect($servername, $username, $password, $db_name);
+         if(!$conn){die("connection failed".mysqli_connect_error());}
+        
+         echo"PROJECT DETAILS" ."<br>";
+
+         $sql = "SELECT*FROM `projects`;";
+         $results = $conn->query($sql);
+         if ($results->num_rows>0) {
+          while ($row = $results->fetch_assoc()) {
+            echo "ID" .$row["ID"], " -Project Name" .$row["PROJECT_NAME"] ."<br>";
+          }
+         } else {
+          echo "No results found!";
+         }
+         ?>
 
         <h3> MY SKILLS </h3>
         <ol>
